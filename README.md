@@ -11,7 +11,7 @@ A plugin that adds a new class to your server named "Tank SCP-173".
 Place the `Tank173.dll` file in your EXILED/Plugins folder.
 
 # Features
-* Hume Shield blast
+* Hume blast
 * Tank 173 has a configurable percent chance to spawn instead of normal 173
 * TBA
 
