@@ -12,4 +12,8 @@ Place the `Tank173.dll` file in your EXILED/Plugins folder.
 
 # Features
 
-* Tank 173 has a configurable percent chance to spawn instead of normal 173
+* Tank 173 has a configurable percent chance to spawn instead of normal 17
+
+# Crediting
+* Parts of this plugin used code from UIU Rescue Squad By Snivyfilms
+* https://github.com/SnivyFilms/UIURescueSquad
