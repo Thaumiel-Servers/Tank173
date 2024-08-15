@@ -6,7 +6,7 @@ A plugin that adds a new class to your server named "Tank SCP-173".
 
 **[EXILED](https://github.com/ExMod-Team/EXILED) must be installed for this to work.**
 
-**CustomRoles need to be enabled on your server for this to work.**
+**CustomRoles needs to be enabled on your server for this to work.**
 
 Place the `Tank173.dll` file in your EXILED/Plugins folder.
 
@@ -16,5 +16,5 @@ Place the `Tank173.dll` file in your EXILED/Plugins folder.
 * TBA
 
 # Crediting
-* Parts of this plugin uses code from UIU Rescue Squad By Snivyfilms
+* Parts of this plugin uses code from UIU Rescue Squad by Snivyfilms
 * https://github.com/SnivyFilms/UIURescueSquad
