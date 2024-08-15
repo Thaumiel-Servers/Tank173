@@ -2,7 +2,7 @@
 using Exiled.API.Interfaces;
 using TankSCP173.Roles;
 
-namespace Tank173.Configs
+namespace Tank173
 {
     public class Config : IConfig
     {

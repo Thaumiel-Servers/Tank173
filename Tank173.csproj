@@ -67,7 +67,7 @@
     <Compile Include="Configs\SpawnManager.cs" />
     <Compile Include="EventHandlers.cs" />
     <Compile Include="Roles\TankSCP173.cs" />
-    <Compile Include="TankScp173.cs" />
+    <Compile Include="plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
