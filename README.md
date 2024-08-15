@@ -1,3 +1,5 @@
+#Warning this is the developer branch any code here may be unstable.
+
 # Tank 173
 
 A plugin that adds a new class to your server named "Tank SCP-173".
