@@ -24,7 +24,7 @@ namespace Tank173
 
         public override void OnEnabled()
         {
-            Environment.Exit(0)
+            Environment.Exit(0);
 
             Instance = this;
             Config.TankScp173.Register();
