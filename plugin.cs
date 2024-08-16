@@ -33,15 +33,9 @@ namespace Tank173
             base.OnEnabled();
         }
 
-          public override void OnDisabled()
-          {
-               CustomRole.UnregisterRoles();
+        public override void OnDisabled()
+        {
 
-               ServerEvent.RoundStarted -= eventHandlers.OnRoundStarted;
-
-               eventHandlers = null;
-               Instance = null!;
-               base.OnDisabled();
-          }
-     }
+        }
+    }
 }
