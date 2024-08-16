@@ -18,7 +18,6 @@ namespace Tank173
      {
 
           public void OnRoundStarted() => Plugin.Instance.IsSpawnable = true;
-          public float SpawnChance { get; set; } = 100;
      
 
      }
