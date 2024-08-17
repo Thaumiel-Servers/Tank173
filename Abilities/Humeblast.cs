@@ -13,6 +13,7 @@ using MEC;
 using Exiled.Events.Handlers;
 using UnityEngine;
 using Exiled.API.Features.Items;
+using Exiled.Events.EventArgs.Player;
 
 namespace Tank173.Abilities
 {
@@ -34,34 +35,38 @@ namespace Tank173.Abilities
 
 
 
-            if (Check(ev.Player))
+            void AbilityUsed(DyingEventArgs ev)
             {
-                ExplosiveGrenade grenade = (ExplosiveGrenade)Exiled.API.Features.Items.Item.Create(ItemType.GrenadeHE);
-                grenade.FuseTime = GrenadeFuseTime;
-                grenade.SpawnActive(ev.Player.Position, ev.Player);
-            };
-            player.ShowHint("Hume Blast Activated", 5f);
-            Log.Debug("Hume Blast used.");
-            Vector3 target = Vector3.zero;
-            if (RunRaycast(player, out RaycastHit hit))
-            {
-                Log.Debug("Hume Blast hits");
-                if ((player.Position - hit.point).sqrMagnitude > 400)
+                if (Check(ev.Player))
                 {
-                    Log.Debug("Hume Blast over max distance");
-                    target = Vector3.MoveTowards(player.Position, hit.point, 20f);
-
-                    if (Physics.Linecast(target, Vector3.down * 20f, out RaycastHit lineHit))
-                    {
-                        Log.Debug("Max distance linecast");
-                        target = lineHit.point;
-                    }
+                    ExplosiveGrenade grenade = (ExplosiveGrenade)Exiled.API.Features.Items.Item.Create(ItemType.GrenadeHE);
+                    grenade.FuseTime = GrenadeFuseTime;
+                    grenade.SpawnActive(ev.Player.Position, ev.Player);
                 }
-                else
-                {
-                    target = hit.point;
-                };
-            }
+            }        
+                    player.ShowHint("Hume Blast Activated", 5f);
+                    Log.Debug("Hume Blast Activated.");
+                    Vector3 target = Vector3.zero;
+                    if (RunRaycast(player, out RaycastHit hit))
+                    {
+                        Log.Debug("Hume Blast hits");
+                        if ((player.Position - hit.point).sqrMagnitude > 400)
+                        {
+                            Log.Debug("Hume Blast over max distance");
+                            target = Vector3.MoveTowards(player.Position, hit.point, 20f);
+
+                            if (Physics.Linecast(target, Vector3.down * 20f, out RaycastHit lineHit))
+                            {
+                                Log.Debug("Max distance linecast");
+                                target = lineHit.point;
+                            }
+                        }
+                        else
+                        {
+                            target = hit.point;
+                        };
+                    }
+                    
 
 
 
@@ -70,16 +75,17 @@ namespace Tank173.Abilities
 
 
 
-
-            bool RunRaycast(Exiled.API.Features.Player player, out RaycastHit hit)
-            {
-                Vector3 forward = player.CameraTransform.forward;
-                return Physics.Raycast(player.Position + forward, forward, out hit, 200f, StandardHitregBase.HitregMask);
-            }
-
+                    bool RunRaycast(Exiled.API.Features.Player player, out RaycastHit hit)
+                    {
+                        Vector3 forward = player.CameraTransform.forward;
+                        return Physics.Raycast(player.Position + forward, forward, out hit, 200f, StandardHitregBase.HitregMask);
+                    }
 
 
+                
+        
         }
-                public enum FirearmType { ParticleDisruptor }
     }
 }
+                
+    
